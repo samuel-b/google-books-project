@@ -1,7 +1,7 @@
 import styles from "./SearchBar.module.scss";
 import { useState } from "react";
 
-const SearchBar = ({ onSubmit }) => {
+const SearchBar = ({ onSubmit, afterSubmit }) => {
     //Used to track the changes of the value inside the input field.
     const [inputValue, setinputValue] = useState("");
     //Function that updates the state of value using the useState setter and value of the e.target.
