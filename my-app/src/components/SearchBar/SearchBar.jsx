@@ -14,7 +14,7 @@ const SearchBar = ({ onSubmit, afterSubmit }) => {
     };
 
     return (
-        <>
+        <div className={styles.SearchBar}>
             <input
                 //When the value is changed executes the handleInputChange function.
                 onChange={handleInputChange}
@@ -23,8 +23,12 @@ const SearchBar = ({ onSubmit, afterSubmit }) => {
                 type="text"
             />
             {/* //When button is clicked executes the handleButtonClick function. */}
-            <button onClick={handleButtonClick}>Search</button>
-        </>
+            <button
+                className={styles.SearchBar__Button}
+                onClick={handleButtonClick}>
+                Search
+            </button>
+        </div>
     );
 };
 

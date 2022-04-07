@@ -1,6 +1,29 @@
+@use "./../../partials/palette";
 
 .BookCard {
-  border: 1px solid black;
-  width: 250px;
-  text-align: center;
+    background-color: palette.$colour-light;
+    border: 1px solid palette.$colour-medium;
+    border-radius: 15px;
+    width: 300px;
+    padding: 8px;
+    text-align: center;
+
+    &__Title {
+        font-weight: bold;
+        color: palette.$colour-medium;
+    }
+
+    &__Image {
+        height: 160px;
+        width: 120px;
+        margin: 0 0 8px 0;
+    }
+
+    &__Author {
+        color: palette.$colour-dark;
+    }
+
+    &__Description {
+        color: palette.$colour-dark;
+    }
 }

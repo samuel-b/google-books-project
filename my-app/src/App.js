@@ -1,7 +1,8 @@
+import styles from "./App.module.scss";
 import SearchBar from "./components/SearchBar";
 import BookShelf from "./containers/BookShelf/BookShelf";
 import { useEffect, useState } from "react";
-
+// 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -27,7 +28,16 @@ function App() {
 
     return (
         <>
-            <SearchBar onSubmit={handleSubmitSearch} />
+            <div className={styles.App}>
+                <h1 className={styles.App__Title}>BookShelf</h1>
+                <p className={styles.App__Description}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean tempor neque elit, ac ullamcorper turpis suscipit
+                    vitae. Sed a quam eu risus aliquam eleifend. Donec.{" "}
+                </p>
+
+                <SearchBar onSubmit={handleSubmitSearch} />
+            </div>
             <BookShelf books={books} />
         </>
     );

@@ -1,0 +1,17 @@
+@use "./partials/palette.scss";
+
+body {
+    background-color: palette.$colour-medium;
+}
+.App {
+    background-color: palette.$colour-light;
+    padding: 10px;
+    text-align: center;
+    &__Title {
+        color: palette.$colour-medium;
+    }
+
+    &__Description {
+        color: palette.$colour-dark;
+    }
+}
