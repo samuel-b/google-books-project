@@ -1,3 +1,17 @@
+@use "./../../partials/palette";
 
 .SearchBar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    &__Button {
+        background-color: palette.$colour-medium;
+        color: palette.$colour-light;
+        border-radius: 5px;
+        &:hover {
+            background-color: palette.$colour-dark;
+            color: palette.$colour-light;
+            cursor: pointer;
+        }
+    }
 }
