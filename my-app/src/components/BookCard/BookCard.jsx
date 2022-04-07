@@ -1,5 +1,4 @@
 import styles from "./BookCard.module.scss";
-// import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -7,14 +6,21 @@ import { useState } from "react";
 
 const BookCard = ({ book }) => {
     console.log(book);
+    //useState hook and functions for controlling the modal.
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleOpen = () => setShow(true);
+
+    //If the keys do not exist inside the object do not include them in the render, otherwise continue.
+    if (!book.volumeInfo.imageLinks || !book.volumeInfo.description) {
+        return;
+    }
+
+    //Used to display only the first 20 words of the book's description on the book card.
     const shortDesc = book.volumeInfo.description
         .split(" ")
         .splice(0, 20)
         .join(" ");
-
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleOpen = () => setShow(true);
 
     return (
         <div className={styles.BookCard}>
@@ -42,7 +48,10 @@ const BookCard = ({ book }) => {
                 <Box className={styles.BookCard__Modal}>
                     <Typography>
                         <h4>{book.volumeInfo.title}</h4>
-                        <img src={book.volumeInfo.imageLinks.thumbnail} alt="" />
+                        <img
+                            src={book.volumeInfo.imageLinks.thumbnail}
+                            alt=""
+                        />
                         <p>
                             <strong>Pages: </strong>
                             {book.volumeInfo.pageCount}
@@ -52,10 +61,16 @@ const BookCard = ({ book }) => {
                             {book.volumeInfo.categories}
                         </p>
                         <p>
+                            <strong>Published Year: </strong>
+                            {book.volumeInfo.publishedDate
+                                .split("-")
+                                .splice(0, 1)
+                                .join(" ")}
+                        </p>
+                        <p>
                             <strong>Publisher: </strong>
                             {book.volumeInfo.publisher}
                         </p>
-
                         <strong> Full Description </strong>
                         <p>{book.volumeInfo.description}</p>
                     </Typography>

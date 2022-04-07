@@ -1,6 +1,5 @@
 import styles from "./App.module.scss";
 import SearchBar from "./components/SearchBar";
-import BookInfo from "./components/BookInfo";
 import BookShelf from "./containers/BookShelf/BookShelf";
 import { useEffect, useState } from "react";
 // 
