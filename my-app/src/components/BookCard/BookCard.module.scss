@@ -26,4 +26,22 @@
     &__Description {
         color: palette.$colour-dark;
     }
+    &__Button {
+        background-color: palette.$colour-medium;
+        color: palette.$colour-light;
+        border-radius: 5px;
+        &:hover {
+            background-color: palette.$colour-dark;
+            color: palette.$colour-light;
+            cursor: pointer;
+        }
+    }
+    &__Modal {
+        background-color: palette.$colour-light;
+        margin-top: 10%;
+        text-align: center;
+    }
+}
+
+.test {
 }
