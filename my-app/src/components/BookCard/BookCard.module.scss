@@ -2,7 +2,7 @@
 
 .BookCard {
     background-color: palette.$colour-light;
-    border: 1px solid palette.$colour-medium;
+    border: 1px solid palette.$colour-dark;
     border-radius: 15px;
     width: 300px;
     padding: 8px;
@@ -10,7 +10,7 @@
 
     &__Title {
         font-weight: bold;
-        color: palette.$colour-medium;
+        color: palette.$colour-dark;
     }
 
     &__Image {
@@ -29,10 +29,8 @@
     &__Button {
         background-color: palette.$colour-medium;
         color: palette.$colour-light;
-        border-radius: 5px;
         &:hover {
-            background-color: palette.$colour-dark;
-            color: palette.$colour-light;
+            transform: scale(1.1);
             cursor: pointer;
         }
     }

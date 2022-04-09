@@ -31,9 +31,7 @@ function App() {
             <div className={styles.App}>
                 <h1 className={styles.App__Title}>BookShelf</h1>
                 <p className={styles.App__Description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean tempor neque elit, ac ullamcorper turpis suscipit
-                    vitae. Sed a quam eu risus aliquam eleifend. Donec.{" "}
+                    Welcome to the BookShelf, start by searching for a keyword, for full description and additional information click more info,
                 </p>
 
                 <SearchBar onSubmit={handleSubmitSearch} />
