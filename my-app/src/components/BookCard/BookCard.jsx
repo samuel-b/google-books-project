@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
 const BookCard = ({ book }) => {
-    console.log(book);
     //useState hook and functions for controlling the modal.
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
