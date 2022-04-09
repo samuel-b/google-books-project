@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/google-books-project/my-app/static/css/main.1d2218c6.css",
-    "main.js": "/google-books-project/my-app/static/js/main.9da3bf73.js",
-    "index.html": "/google-books-project/my-app/index.html",
-    "main.1d2218c6.css.map": "/google-books-project/my-app/static/css/main.1d2218c6.css.map",
-    "main.9da3bf73.js.map": "/google-books-project/my-app/static/js/main.9da3bf73.js.map"
+    "main.css": "/google-books-project/static/css/main.1d2218c6.css",
+    "main.js": "/google-books-project/static/js/main.9da3bf73.js",
+    "index.html": "/google-books-project/index.html",
+    "main.1d2218c6.css.map": "/google-books-project/static/css/main.1d2218c6.css.map",
+    "main.9da3bf73.js.map": "/google-books-project/static/js/main.9da3bf73.js.map"
   },
   "entrypoints": [
     "static/css/main.1d2218c6.css",
