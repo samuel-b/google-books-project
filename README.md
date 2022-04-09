@@ -6,7 +6,7 @@ Link
 
 ![Screenshot 1](images/Home-Screenshot.png)
 ![Screenshot 2](images/Grid-Screenshot.png)
-![Screenshot 3](images/Modal-Screenshot.png)
+![Screenshot 3](images/Modal.png)
 
 # Description
 
