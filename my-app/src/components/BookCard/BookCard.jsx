@@ -27,9 +27,10 @@ const BookCard = ({ book }) => {
             <img
                 className={styles.BookCard__Image}
                 src={book.volumeInfo.imageLinks.thumbnail}
+                alt="bookImage"
             />
             <p className={styles.BookCard__Author}>
-                <strong>Authors(s): </strong>
+                <strong>Author(s): </strong>
                 {`${book.volumeInfo.authors}`}
             </p>
             <p className={styles.BookCard__Description}>
@@ -46,29 +47,22 @@ const BookCard = ({ book }) => {
                 aria-describedby="modal-modal-description">
                 <Box className={styles.BookCard__Modal}>
                     <Typography>
-                        <h4>{book.volumeInfo.title}</h4>
+                        <h3>{book.volumeInfo.title}</h3>
                         <img
                             src={book.volumeInfo.imageLinks.thumbnail}
-                            alt=""
-                        />
+                            alt="bookImage"></img>
                         <p>
                             <strong>Pages: </strong>
                             {book.volumeInfo.pageCount}
                         </p>
                         <p>
-                            <strong>Categories: </strong>
-                            {book.volumeInfo.categories}
-                        </p>
-                        <p>
-                            <strong>Published Year: </strong>
+                            <strong>Publisher: </strong>
+                            {book.volumeInfo.publisher}(
                             {book.volumeInfo.publishedDate
                                 .split("-")
                                 .splice(0, 1)
                                 .join(" ")}
-                        </p>
-                        <p>
-                            <strong>Publisher: </strong>
-                            {book.volumeInfo.publisher}
+                            )
                         </p>
                         <strong> Full Description </strong>
                         <p>{book.volumeInfo.description}</p>
